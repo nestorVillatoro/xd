@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
     providedIn: 'root'
 })
 export class AuthService {
-    private apiUrl = 'http://localhost:8080/api/login'; // Cambia la URL según tu API
+    private apiUrl = 'http://13.58.193.164:3000/api/login'; // Cambia la URL según tu API
     private loggedInUser: string = ""
 
     constructor(private http: HttpClient) { }
@@ -31,7 +31,7 @@ export class AuthService {
 
     // Método para cerrar sesión
     logout() {
-    return this.http.post('http://localhost:8080/api/logout', {}).subscribe(
+    return this.http.post('http://13.58.193.164:3000/api/logout', {}).subscribe(
         () => {
             this.loggedInUser = '';
             localStorage.removeItem('loggedInUser'); // Limpiar el localStorage
