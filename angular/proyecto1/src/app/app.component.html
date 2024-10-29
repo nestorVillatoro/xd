@@ -1,0 +1,30 @@
+<html>
+  <body>
+    <ng-container *ngIf="router.url === '/'">
+    <header>
+      <nav>
+        <button class="boton-login" routerLink="/login">Login</button>
+      </nav>
+    </header>
+
+    <div class="container">
+      <h2>INPUT</h2>
+
+      <textarea [(ngModel)]="commandInput" placeholder="hola mundo"></textarea>
+
+      <div class="buttons">
+        <button (click)="executeCommand()">Ejecutar...</button>
+        <input type="file" accept=".smia" (change)="loadFile($event)" />
+      </div>
+
+      <div class="output">
+        <h2>OUTPUT</h2>
+        <textarea readonly [value]="commandOutput"></textarea>
+      </div>
+    </div>
+
+
+</ng-container>
+<router-outlet></router-outlet> 
+  </body>
+</html>

@@ -1,0 +1,17 @@
+digraph G {
+        node [shape=plaintext]
+        tabla [label=<
+            <table border="1" cellborder="2" cellspacing="0" cellpadding="5" bgcolor="lightgray">
+                <tr>
+                    <td colspan="2" bgcolor="black" fontcolor="white">
+                        <b><font color="white">REPORTE EBR</font></b>
+                    </td>
+                </tr>
+
+				<tr><td colspan="2" bgcolor="gray" fontcolor="white"><b><font color="white">PARTICIÓN 1</font></b></td></tr>
+				<tr><td><b>Estado</b></td><td>0</td></tr>
+				<tr><td><b>Fit</b></td><td>B</td></tr>
+				<tr><td><b>Inicio</b></td><td>185</td></tr>
+				<tr><td><b>Tamaño</b></td><td>0 bytes</td></tr>
+				<tr><td><b>Nombre</b></td><td>Particion1</td></tr>
+			</table>>] }
