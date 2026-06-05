@@ -1,0 +1,75 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
+  <diagram id="f977Bk5M9tBJucu62G0a" name="CDU001 - Autenticacion">
+    <mxGraphModel dx="1202" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k-EVktysqeq2huN25YT4-51" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="470" width="670" x="210" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;strokeWidth=1;dashed=1;" value="CDU001: Autenticación, Sesiones y Multiperfil" vertex="1">
+          <mxGeometry height="450" width="510" x="360" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-39" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="k-EVktysqeq2huN25YT4-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-40" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="k-EVktysqeq2huN25YT4-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Visitante" vertex="1">
+          <mxGeometry height="60" width="30" x="250" y="339.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-43" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=1;" target="k-EVktysqeq2huN25YT4-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-48" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0;entryDx=0;entryDy=0;curved=1;" target="k-EVktysqeq2huN25YT4-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Titular de la Cuenta" vertex="1">
+          <mxGeometry height="60" width="30" x="250" y="489.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-49" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="k-EVktysqeq2huN25YT4-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-50" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;curved=1;" target="k-EVktysqeq2huN25YT4-10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="649" />
+              <mxPoint x="370" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-4" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Espectador" vertex="1">
+          <mxGeometry height="60" width="30" x="250" y="618.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU1 Registrar Usuario" vertex="1">
+          <mxGeometry height="58" width="170" x="392" y="299.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU02 Iniciar Sesión" vertex="1">
+          <mxGeometry height="58" width="170" x="392" y="379.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU-04 Cerrar Sesión" vertex="1">
+          <mxGeometry height="58" width="170" x="392" y="539.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-12" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU-03 Administrar Perfiles" vertex="1">
+          <mxGeometry height="58" width="170" x="392" y="459.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-13" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU-05 Seleccionar Perfil Activo" vertex="1">
+          <mxGeometry height="58" width="170" x="392" y="619.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Enviar Correo de Confirmación" vertex="1">
+          <mxGeometry height="52" width="190" x="667" y="302.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Generar JWT y Cookie de Sesión" vertex="1">
+          <mxGeometry height="52" width="190" x="667" y="382.9999938964844" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-30" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-7" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="k-EVktysqeq2huN25YT4-15" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-EVktysqeq2huN25YT4-31" edge="1" parent="1" source="k-EVktysqeq2huN25YT4-8" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="k-EVktysqeq2huN25YT4-16" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
