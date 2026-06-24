@@ -1,0 +1,492 @@
+<mxfile host="app.diagrams.net" pages="1">
+  <diagram name="Reserva de Cita Médica" id="act-reserva-cita">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1500" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- Título -->
+        <mxCell id="title" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontStyle=1" value="Reserva de Cita Médica Virtual" vertex="1">
+          <mxGeometry height="30" width="400" x="550" y="50" as="geometry" />
+        </mxCell>
+
+        <!-- Grupo contenedor principal -->
+        <mxCell id="grp" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="3200" width="1400" x="50" y="100" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- SWIMLANE 1: Paciente -->
+        <!-- ============================================================ -->
+        <mxCell id="sw-paciente" parent="grp" style="swimlane;startSize=20;whiteSpace=wrap;html=1;" value="Paciente" vertex="1">
+          <mxGeometry height="3200" width="280" x="0" y="0" as="geometry" />
+        </mxCell>
+
+        <!-- Inicio -->
+        <mxCell id="p-start" parent="sw-paciente" style="ellipse;html=1;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p-start-edge" edge="1" parent="sw-paciente" source="p-start" target="p-ingresar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Ingresar credenciales -->
+        <mxCell id="p-ingresar" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Ingresar credenciales" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="100" as="geometry" />
+        </mxCell>
+
+        <!-- Mostrar error login -->
+        <mxCell id="p-error-login" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mostrar error de autenticación" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="p-end1" parent="sw-paciente" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="e-p-error1" edge="1" parent="sw-paciente" source="p-error-login" target="p-end1" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Buscar especialista -->
+        <mxCell id="p-buscar" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Buscar especialista por área médica" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="670" as="geometry" />
+        </mxCell>
+
+        <!-- Ver resultados -->
+        <mxCell id="p-ver-resultados" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Visualizar lista de especialistas" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="930" as="geometry" />
+        </mxCell>
+
+        <!-- Seleccionar horario -->
+        <mxCell id="p-seleccionar" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Seleccionar horario disponible" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="1090" as="geometry" />
+        </mxCell>
+
+        <!-- Confirmar reserva -->
+        <mxCell id="p-confirmar" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Confirmar reserva de cita" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="1250" as="geometry" />
+        </mxCell>
+
+        <!-- Mostrar error duplicado -->
+        <mxCell id="p-error-dup" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Mostrar error: horario no disponible" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="p-end2" parent="sw-paciente" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="1685" as="geometry" />
+        </mxCell>
+        <mxCell id="e-p-dup-end" edge="1" parent="sw-paciente" source="p-error-dup" target="p-end2" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Recibir confirmación -->
+        <mxCell id="p-recibir" parent="sw-paciente" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Recibir confirmación de cita" vertex="1">
+          <mxGeometry height="40" width="160" x="60" y="2900" as="geometry" />
+        </mxCell>
+        <mxCell id="p-end3" parent="sw-paciente" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="125" y="2980" as="geometry" />
+        </mxCell>
+        <mxCell id="e-p-recibir-end" edge="1" parent="sw-paciente" source="p-recibir" target="p-end3" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- SWIMLANE 2: API Gateway / Auth Service -->
+        <!-- ============================================================ -->
+        <mxCell id="sw-api" parent="grp" style="swimlane;startSize=20;whiteSpace=wrap;html=1;" value="API Gateway / Auth Service" vertex="1">
+          <mxGeometry height="3200" width="300" x="280" y="0" as="geometry" />
+        </mxCell>
+
+        <!-- Recibir solicitud login -->
+        <mxCell id="a-recibir-login" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Recibir solicitud de autenticación" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="150" as="geometry" />
+        </mxCell>
+
+        <!-- Validar datos -->
+        <mxCell id="a-validar" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Validar datos de entrada" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a-rec-val" edge="1" parent="sw-api" source="a-recibir-login" target="a-validar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decisión: datos válidos? -->
+        <mxCell id="a-dec-valid" parent="sw-api" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="¿Datos válidos?" vertex="1">
+          <mxGeometry height="60" width="120" x="90" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a-val-dec" edge="1" parent="sw-api" source="a-validar" target="a-dec-valid" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Retornar error -->
+        <mxCell id="a-error-400" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Retornar error 400" vertex="1">
+          <mxGeometry height="40" width="130" x="15" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a-no-400" edge="1" parent="sw-api" source="a-dec-valid" target="a-error-400" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;entryX=0.5;entryY=0;exitX=0;exitY=0.5;" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Generar JWT -->
+        <mxCell id="a-jwt" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Generar Token JWT" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="e-a-sí-jwt" edge="1" parent="sw-api" source="a-dec-valid" target="a-jwt" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;entryX=0.5;entryY=0;exitX=1;exitY=0.5;" value="sí">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="330" />
+              <mxPoint x="260" y="520" />
+              <mxPoint x="149" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Procesar búsqueda -->
+        <mxCell id="a-busqueda" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Procesar búsqueda de especialistas" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="720" as="geometry" />
+        </mxCell>
+
+        <!-- Procesar reserva -->
+        <mxCell id="a-proc-reserva" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Procesar solicitud de reserva" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="1300" as="geometry" />
+        </mxCell>
+
+        <!-- Retornar conflicto -->
+        <mxCell id="a-error-409" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Retornar conflicto 409" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="1560" as="geometry" />
+        </mxCell>
+
+        <!-- Retornar OK -->
+        <mxCell id="a-ok" parent="sw-api" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Retornar reserva confirmada" vertex="1">
+          <mxGeometry height="40" width="175" x="62" y="2120" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- SWIMLANE 3: Appointment Service + Redis -->
+        <!-- ============================================================ -->
+        <mxCell id="sw-appt" parent="grp" style="swimlane;startSize=20;whiteSpace=wrap;html=1;" value="Appointment Service / Redis Lock" vertex="1">
+          <mxGeometry height="3200" width="320" x="580" y="0" as="geometry" />
+        </mxCell>
+
+        <!-- Buscar especialistas en BD -->
+        <mxCell id="r-buscar" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Consultar especialistas disponibles" vertex="1">
+          <mxGeometry height="40" width="190" x="65" y="770" as="geometry" />
+        </mxCell>
+
+        <!-- Recibir solicitud de reserva -->
+        <mxCell id="r-recibir" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Recibir solicitud de reserva" vertex="1">
+          <mxGeometry height="40" width="190" x="65" y="1350" as="geometry" />
+        </mxCell>
+
+        <!-- Intentar adquirir Redis Lock -->
+        <mxCell id="r-lock" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Intentar adquirir Redis Lock (semáforo distribuido)" vertex="1">
+          <mxGeometry height="50" width="190" x="65" y="1430" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-rec-lock" edge="1" parent="sw-appt" source="r-recibir" target="r-lock" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Decisión: lock adquirido? -->
+        <mxCell id="r-dec-lock" parent="sw-appt" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="¿Lock adquirido?" vertex="1">
+          <mxGeometry height="60" width="130" x="95" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-lock-dec" edge="1" parent="sw-appt" source="r-lock" target="r-dec-lock" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- No lock: rechazar -->
+        <mxCell id="r-rechazar" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Rechazar reserva (horario ocupado)" vertex="1">
+          <mxGeometry height="40" width="190" x="65" y="1630" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-no" edge="1" parent="sw-appt" source="r-dec-lock" target="r-rechazar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;entryX=0.5;entryY=0;" value="no">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Sí lock: verificar disponibilidad -->
+        <mxCell id="r-verificar" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Verificar disponibilidad del horario" vertex="1">
+          <mxGeometry height="40" width="190" x="65" y="1730" as="geometry" />
+        </mxCell>
+        <mxCell id="e-r-si" edge="1" parent="sw-appt" source="r-dec-lock" target="r-verificar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;entryX=0.5;entryY=0;exitX=1;exitY=0.5;" value="sí">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="290" y="1550" />
+              <mxPoint x="290" y="1690" />
+              <mxPoint x="160" y="1690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Liberar lock -->
+        <mxCell id="r-liberar" parent="sw-appt" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Liberar Redis Lock" vertex="1">
+          <mxGeometry height="40" width="190" x="65" y="2060" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- SWIMLANE 4: PostgreSQL -->
+        <!-- ============================================================ -->
+        <mxCell id="sw-pg" parent="grp" style="swimlane;startSize=20;whiteSpace=wrap;html=1;" value="PostgreSQL" vertex="1">
+          <mxGeometry height="3200" width="260" x="900" y="0" as="geometry" />
+        </mxCell>
+
+        <!-- Verificar credenciales -->
+        <mxCell id="pg-creds" parent="sw-pg" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Verificar credenciales del paciente" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="pg-dec-creds" parent="sw-pg" style="rhombus;whiteSpace=wrap;html=1;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="¿Credenciales correctas?" vertex="1">
+          <mxGeometry height="60" width="140" x="60" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="e-pg-creds-dec" edge="1" parent="sw-pg" source="pg-creds" target="pg-dec-creds" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Retornar especialistas -->
+        <mxCell id="pg-especialistas" parent="sw-pg" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Retornar lista de especialistas disponibles" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="830" as="geometry" />
+        </mxCell>
+
+        <!-- Persistir cita -->
+        <mxCell id="pg-persistir" parent="sw-pg" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Persistir cita en base de datos" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="1820" as="geometry" />
+        </mxCell>
+
+        <!-- Registrar auditoría -->
+        <mxCell id="pg-auditoria" parent="sw-pg" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Registrar auditoría de reserva" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="1910" as="geometry" />
+        </mxCell>
+        <mxCell id="e-pg-pers-aud" edge="1" parent="sw-pg" source="pg-persistir" target="pg-auditoria" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- SWIMLANE 5: RabbitMQ / Notification Service -->
+        <!-- ============================================================ -->
+        <mxCell id="sw-mq" parent="grp" style="swimlane;startSize=20;whiteSpace=wrap;html=1;" value="RabbitMQ / Notification Service" vertex="1">
+          <mxGeometry height="3200" width="260" x="1160" y="0" as="geometry" />
+        </mxCell>
+
+        <!-- Publicar evento -->
+        <mxCell id="mq-publicar" parent="sw-mq" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Publicar evento CitaConfirmada" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="2180" as="geometry" />
+        </mxCell>
+
+        <!-- Consumir evento -->
+        <mxCell id="mq-consumir" parent="sw-mq" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Consumir mensaje (Notification Service)" vertex="1">
+          <mxGeometry height="40" width="160" x="50" y="2360" as="geometry" />
+        </mxCell>
+        <mxCell id="e-mq-pub-cons" edge="1" parent="sw-mq" source="mq-publicar" target="mq-consumir" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Barra sincronización paralela (fork) -->
+        <mxCell id="mq-fork" parent="sw-mq" style="shape=line;html=1;strokeWidth=6;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="10" width="200" x="30" y="2460" as="geometry" />
+        </mxCell>
+        <mxCell id="e-mq-cons-fork" edge="1" parent="sw-mq" source="mq-consumir" target="mq-fork" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Enviar correo -->
+        <mxCell id="mq-correo" parent="sw-mq" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Enviar email de confirmación (SendGrid)" vertex="1">
+          <mxGeometry height="40" width="160" x="10" y="2520" as="geometry" />
+        </mxCell>
+
+        <!-- Enviar push -->
+        <mxCell id="mq-push" parent="sw-mq" style="rounded=1;whiteSpace=wrap;html=1;arcSize=40;fontColor=#000000;fillColor=#ffffc0;strokeColor=#ff0000;" value="Enviar notificación push" vertex="1">
+          <mxGeometry height="40" width="160" x="90" y="2520" as="geometry" />
+        </mxCell>
+
+        <!-- Fork → correo y push en paralelo -->
+        <mxCell id="e-fork-correo" edge="1" parent="sw-mq" source="mq-fork" target="mq-correo" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.25;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-fork-push" edge="1" parent="sw-mq" source="mq-fork" target="mq-push" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.75;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Join después de correo y push -->
+        <mxCell id="mq-join" parent="sw-mq" style="shape=line;html=1;strokeWidth=6;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="10" width="200" x="30" y="2620" as="geometry" />
+        </mxCell>
+        <mxCell id="e-correo-join" edge="1" parent="sw-mq" source="mq-correo" target="mq-join" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e-push-join" edge="1" parent="sw-mq" source="mq-push" target="mq-join" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ============================================================ -->
+        <!-- FLECHAS ENTRE SWIMLANES (en grp) -->
+        <!-- ============================================================ -->
+
+        <!-- Paciente → API: login -->
+        <mxCell id="x-p-a-login" edge="1" parent="grp" source="p-ingresar" target="a-recibir-login" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API → PG: verificar credenciales -->
+        <mxCell id="x-a-pg-creds" edge="1" parent="grp" source="a-validar" target="pg-creds" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="240" />
+              <mxPoint x="430" y="420" />
+              <mxPoint x="1000" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- PG → API: creds no válidas → error 400 -->
+        <mxCell id="x-pg-a-no" edge="1" parent="grp" source="pg-dec-creds" target="a-error-400" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;" value="no">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="970" y="500" />
+              <mxPoint x="430" y="500" />
+              <mxPoint x="430" y="415" />
+              <mxPoint x="195" y="415" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API error400 → Paciente: error login -->
+        <mxCell id="x-a-p-err" edge="1" parent="grp" source="a-error-400" target="p-error-login" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="415" />
+              <mxPoint x="140" y="415" />
+              <mxPoint x="140" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- PG → API: creds OK → JWT -->
+        <mxCell id="x-pg-a-si" edge="1" parent="grp" source="pg-dec-creds" target="a-jwt" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;fontSize=12;" value="sí">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="580" />
+              <mxPoint x="430" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API JWT → Paciente: buscar -->
+        <mxCell id="x-a-p-buscar" edge="1" parent="grp" source="a-jwt" target="p-buscar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="640" />
+              <mxPoint x="140" y="640" />
+              <mxPoint x="140" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Paciente buscar → API busqueda -->
+        <mxCell id="x-p-a-buscar" edge="1" parent="grp" source="p-buscar" target="a-busqueda" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API busqueda → Appt Service -->
+        <mxCell id="x-a-r-buscar" edge="1" parent="grp" source="a-busqueda" target="r-buscar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Appt → PG: consultar especialistas -->
+        <mxCell id="x-r-pg-esp" edge="1" parent="grp" source="r-buscar" target="pg-especialistas" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- PG → Paciente: ver resultados -->
+        <mxCell id="x-pg-p-res" edge="1" parent="grp" source="pg-especialistas" target="p-ver-resultados" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="910" />
+              <mxPoint x="140" y="910" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Paciente: ver resultados → seleccionar -->
+        <mxCell id="x-p-selec" edge="1" parent="grp" source="p-ver-resultados" target="p-seleccionar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Paciente seleccionar → confirmar -->
+        <mxCell id="x-p-conf" edge="1" parent="grp" source="p-seleccionar" target="p-confirmar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;curved=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Paciente confirmar → API proc reserva -->
+        <mxCell id="x-p-a-reserva" edge="1" parent="grp" source="p-confirmar" target="a-proc-reserva" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- API proc reserva → Appt: recibir -->
+        <mxCell id="x-a-r-reserva" edge="1" parent="grp" source="a-proc-reserva" target="r-recibir" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Appt rechazar → API error 409 -->
+        <mxCell id="x-r-a-rej" edge="1" parent="grp" source="r-rechazar" target="a-error-409" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="1650" />
+              <mxPoint x="430" y="1650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API 409 → Paciente: error duplicado -->
+        <mxCell id="x-a-p-dup" edge="1" parent="grp" source="a-error-409" target="p-error-dup" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="1580" />
+              <mxPoint x="140" y="1580" />
+              <mxPoint x="140" y="1630" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Appt verificar → PG persistir -->
+        <mxCell id="x-r-pg-pers" edge="1" parent="grp" source="r-verificar" target="pg-persistir" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- PG auditoria → Appt liberar lock -->
+        <mxCell id="x-pg-r-lib" edge="1" parent="grp" source="pg-auditoria" target="r-liberar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="2000" />
+              <mxPoint x="740" y="2000" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Appt liberar → API ok -->
+        <mxCell id="x-r-a-ok" edge="1" parent="grp" source="r-liberar" target="a-ok" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="740" y="2140" />
+              <mxPoint x="430" y="2140" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- API ok → RabbitMQ publicar -->
+        <mxCell id="x-a-mq" edge="1" parent="grp" source="a-ok" target="mq-publicar" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="2200" />
+              <mxPoint x="1260" y="2200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- RabbitMQ join → Paciente recibir confirmación -->
+        <mxCell id="x-mq-p-conf" edge="1" parent="grp" source="mq-join" target="p-recibir" style="edgeStyle=orthogonalEdgeStyle;html=1;verticalAlign=bottom;endArrow=open;endSize=8;strokeColor=#ff0000;rounded=0;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1260" y="2920" />
+              <mxPoint x="140" y="2920" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
