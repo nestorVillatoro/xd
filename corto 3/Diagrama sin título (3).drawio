@@ -1,0 +1,583 @@
+<mxfile host="app.diagrams.net" pages="7">
+  <diagram name="Alto Nivel" id="O3k32H-jvG21nJXQ92Sf">
+    <mxGraphModel dx="1070" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="al-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="440" width="570" x="240" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="al-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="330" width="370" x="330" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="al-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=16;fontStyle=1;" value="Sistema de Telemetría de Delivery" vertex="1">
+          <mxGeometry height="40" width="490" x="270" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="al-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fontSize=14;" value="Plataforma de&#xa;Telemetría en&#xa;Tiempo Real" vertex="1">
+          <mxGeometry height="120" width="250" x="390" y="230" as="geometry" />
+        </mxCell>
+        <mxCell id="al-5" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Repartidor" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="al-6" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Cliente" vertex="1">
+          <mxGeometry height="60" width="30" x="260" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="BSjFKlLHEPAczn38bIRa-2" edge="1" parent="1" source="al-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="al-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="al-7" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Apache Kafka&#xa;(externo)" vertex="1">
+          <mxGeometry height="60" width="30" x="740" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="BSjFKlLHEPAczn38bIRa-3" edge="1" parent="1" source="al-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" target="al-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="al-8" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="MongoDB&#xa;(externo)" vertex="1">
+          <mxGeometry height="60" width="30" x="750" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="BSjFKlLHEPAczn38bIRa-4" edge="1" parent="1" source="al-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" target="al-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="603" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="al-9" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Azure AKS&#xa;(externo)" vertex="1">
+          <mxGeometry height="60" width="30" x="720" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="al-e1" edge="1" parent="1" source="al-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;" target="al-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="al-e2" edge="1" parent="1" source="al-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" target="al-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="427" y="450" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Primera Descomposición" id="xLRYgwg-c6wsbEwUcw2-">
+    <mxGraphModel dx="1259" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="pd-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="630" width="510" x="200" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;fontSize=14;fontStyle=1;" value="Sistema de Telemetría de Delivery" vertex="1">
+          <mxGeometry height="595" width="320" x="300" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-c1" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CDU001: Transmisión GPS&#xa;de Repartidores" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-c2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CDU002: Ingestión y&#xa;Procesamiento Kafka" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-c3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CDU003: Gestión de&#xa;Posición en MongoDB" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-c4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CDU004: Seguimiento en&#xa;Tiempo Real (Cliente)" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-c5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="CDU005: Monitoreo y&#xa;Gestión Operacional" vertex="1">
+          <mxGeometry height="70" width="200" x="370" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-a1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Repartidor" vertex="1">
+          <mxGeometry height="60" width="30" x="220" y="225" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-a2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Cliente" vertex="1">
+          <mxGeometry height="60" width="30" x="660" y="445" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-a3" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" value="Operador /&#xa;Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="240" y="555" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-e1" edge="1" parent="1" source="pd-a1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="pd-c1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="255" />
+              <mxPoint x="310" y="145" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pd-e2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="pd-c2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="255" />
+            </Array>
+            <mxPoint x="260" y="255" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pd-e3" edge="1" parent="1" source="pd-a2" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="pd-c4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-e4" edge="1" parent="1" source="pd-a3" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="pd-c5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pd-e5" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="pd-c3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="330" y="585" />
+              <mxPoint x="330" y="365" />
+            </Array>
+            <mxPoint x="270" y="585" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="CDU001 - Transmisión GPS" id="sQiaCAWasfrWJ1d8Fh-B">
+    <mxGraphModel dx="1259" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c1-outer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="580" width="720" x="100" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-inner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;" value="CDU001: Transmisión GPS de Repartidores" vertex="1">
+          <mxGeometry height="555" width="600" x="210" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU01&#xa;Autenticar Dispositivo&#xa;Móvil" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU02&#xa;Establecer Conexión&#xa;WebSocket" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU03&#xa;Capturar Coordenadas&#xa;GPS" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="327.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU04&#xa;Transmitir Evento&#xa;de Posición" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU05&#xa;Gestionar Reconexión&#xa;Automática" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-sys1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Validar Token&#xa;de Autenticación" vertex="1">
+          <mxGeometry height="55" width="180" x="620" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-sys2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Publicar Evento&#xa;en Kafka" vertex="1">
+          <mxGeometry height="55" width="180" x="620" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-sys3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Reintentar Conexión&#xa;WebSocket" vertex="1">
+          <mxGeometry height="55" width="180" x="620" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-act" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Repartidor" vertex="1">
+          <mxGeometry height="60" width="30" x="120" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-ae1" edge="1" parent="1" source="c1-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c1-uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="360" />
+              <mxPoint x="200" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1-ae2" edge="1" parent="1" source="c1-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c1-uc2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="360" />
+              <mxPoint x="210" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1-ae3" edge="1" parent="1" source="c1-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c1-uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-ae4" edge="1" parent="1" source="c1-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c1-uc4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="360" />
+              <mxPoint x="200" y="457" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1-ae5" edge="1" parent="1" source="c1-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c1-uc5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="360" />
+              <mxPoint x="190" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c1-ie1" edge="1" parent="1" source="c1-uc1" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c1-sys1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-ie2" edge="1" parent="1" source="c1-uc4" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c1-sys2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c1-ie3" edge="1" parent="1" source="c1-uc5" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c1-sys3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="CDU002 - Ingestión Kafka" id="5eJzJICzK-hwuHL2YMEv">
+    <mxGraphModel dx="1259" dy="736" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c2-outer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="600" width="730" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-inner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;" value="CDU002: Ingestión y Procesamiento Kafka" vertex="1">
+          <mxGeometry height="555" width="510" x="290" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU06&#xa;Recibir Evento GPS&#xa;en Tópico Kafka" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU07&#xa;Consumir Mensajes&#xa;desde FastAPI" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU08&#xa;Validar y Deserializar&#xa;Payload GPS" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU09&#xa;Gestionar Dead&#xa;Letter Queue" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU10&#xa;Escalar Particiones&#xa;de Kafka" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-sys1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Aplicar Schema&#xa;de Avro/JSON" vertex="1">
+          <mxGeometry height="55" width="180" x="610" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-sys2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Registrar Offset&#xa;del Consumidor" vertex="1">
+          <mxGeometry height="55" width="180" x="610" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-sys3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Registrar Error&#xa;en DLQ" vertex="1">
+          <mxGeometry height="55" width="180" x="610" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-sys4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Autoescalar Pods&#xa;en AKS" vertex="1">
+          <mxGeometry height="55" width="180" x="610" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-act1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Sistema&#xa;(Evento Interno)" vertex="1">
+          <mxGeometry height="60" width="30" x="110" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-act2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Operador /&#xa;Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="110" y="532.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ae1" edge="1" parent="1" source="c2-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c2-uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="300" />
+              <mxPoint x="195" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2-ae2" edge="1" parent="1" source="c2-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c2-uc2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="300" />
+              <mxPoint x="230" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2-ae3" edge="1" parent="1" source="c2-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c2-uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ae4" edge="1" parent="1" source="c2-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c2-uc4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="205" y="300" />
+              <mxPoint x="205" y="457" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c2-ae5" edge="1" parent="1" source="c2-act2" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c2-uc5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ie1" edge="1" parent="1" source="c2-uc1" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c2-sys1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ie2" edge="1" parent="1" source="c2-uc2" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c2-sys2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ie3" edge="1" parent="1" source="c2-uc4" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c2-sys3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c2-ie4" edge="1" parent="1" source="c2-uc5" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c2-sys4" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="CDU003 - Gestión MongoDB" id="9N9PDgbg57Rk6lPC_Ahd">
+    <mxGraphModel dx="1019" dy="596" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3-outer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="700" width="730" x="80" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-inner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;" value="CDU003: Gestión de Posición en MongoDB" vertex="1">
+          <mxGeometry height="670" width="530" x="260" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU11&#xa;Actualizar Posición&#xa;del Repartidor" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU12&#xa;Almacenar Historial&#xa;de Ruta" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU13&#xa;Consultar Última&#xa;Posición Conocida" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU14&#xa;Indexar Datos&#xa;Geoespaciales" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU15&#xa;Purgar Registros&#xa;Históricos Viejos" vertex="1">
+          <mxGeometry height="65" width="180" x="330" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-sys1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Ejecutar upsert&#xa;en MongoDB" vertex="1">
+          <mxGeometry height="55" width="180" x="600" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-sys2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Insertar Documento&#xa;GeoJSON en colección" vertex="1">
+          <mxGeometry height="55" width="180" x="600" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-sys3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Aplicar Índice&#xa;2dsphere" vertex="1">
+          <mxGeometry height="55" width="180" x="600" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-sys4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Ejecutar TTL&#xa;Automático" vertex="1">
+          <mxGeometry height="55" width="180" x="600" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-act1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Sistema&#xa;(Evento Interno)" vertex="1">
+          <mxGeometry height="60" width="30" x="110" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-act2" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Operador /&#xa;Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="110" y="427.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-ae1" edge="1" parent="1" source="c3-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c3-uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="245" />
+              <mxPoint x="180" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-ae2" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;curved=1;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="244.91" />
+              <mxPoint x="170" y="244.91" />
+            </Array>
+            <mxPoint x="140" y="244.91800000000003" as="sourcePoint" />
+            <mxPoint x="330.0103133767196" y="244.91800000000003" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-ae3" edge="1" parent="1" source="c3-act1" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c3-uc3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="180" y="245" />
+              <mxPoint x="180" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-ae4" edge="1" parent="1" source="c3-act2" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c3-uc4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-ae5" edge="1" parent="1" source="c3-act2" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c3-uc5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="457" />
+              <mxPoint x="195" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c3-ie1" edge="1" parent="1" source="c3-uc1" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c3-sys1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-ie2" edge="1" parent="1" source="c3-uc2" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c3-sys2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-ie3" edge="1" parent="1" source="c3-uc4" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c3-sys3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c3-ie4" edge="1" parent="1" source="c3-uc5" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c3-sys4" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="CDU004 y CDU005" id="aKd8azY7-yNulO1brhrE">
+    <mxGraphModel dx="930" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c4-outer" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="580" width="700" x="50" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-inner" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;" value="CDU004: Seguimiento en Tiempo Real (Cliente)" vertex="1">
+          <mxGeometry height="555" width="520" x="220" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-uc1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU16&#xa;Ver Mapa en&#xa;Tiempo Real" vertex="1">
+          <mxGeometry height="65" width="180" x="270" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-uc2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU17&#xa;Recibir Actualización&#xa;de Posición" vertex="1">
+          <mxGeometry height="65" width="180" x="270" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU18&#xa;Estimar Tiempo&#xa;de Llegada (ETA)" vertex="1">
+          <mxGeometry height="65" width="180" x="270" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU19&#xa;Notificar Estado&#xa;del Pedido" vertex="1">
+          <mxGeometry height="65" width="180" x="270" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU20&#xa;Cerrar Sesión de&#xa;Seguimiento" vertex="1">
+          <mxGeometry height="65" width="180" x="270" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-sys1" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Consultar Posición&#xa;en MongoDB" vertex="1">
+          <mxGeometry height="55" width="180" x="540" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-sys2" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Calcular Ruta&#xa;con Azure Maps" vertex="1">
+          <mxGeometry height="55" width="180" x="540" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-sys3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Enviar Push&#xa;Notification" vertex="1">
+          <mxGeometry height="55" width="180" x="540" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-act" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Cliente" vertex="1">
+          <mxGeometry height="60" width="30" x="60" y="322.5" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-ae1" edge="1" parent="1" source="c4-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c4-uc1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="353" />
+              <mxPoint x="155" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c4-ae2" edge="1" parent="1" source="c4-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c4-uc2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="353" />
+              <mxPoint x="165" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c4-ae3" edge="1" parent="1" source="c4-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c4-uc3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-ae4" edge="1" parent="1" source="c4-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c4-uc4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="353" />
+              <mxPoint x="165" y="457" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c4-ae5" edge="1" parent="1" source="c4-act" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="c4-uc5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="155" y="353" />
+              <mxPoint x="155" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c4-ie1" edge="1" parent="1" source="c4-uc2" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c4-sys1" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-ie2" edge="1" parent="1" source="c4-uc3" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c4-sys2" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="c4-ie3" edge="1" parent="1" source="c4-uc4" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="c4-sys3" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="5KQIqBAutDU5xPxwvNMp" name="Página-7">
+    <mxGraphModel dx="702" dy="894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="580" width="690" x="890" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;dashed=1;verticalAlign=top;align=center;fontSize=13;fontStyle=1;" value="CDU005: Monitoreo y Gestión Operacional" vertex="1">
+          <mxGeometry height="555" width="600" x="970" y="55" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU21&#xa;Ver Dashboard de&#xa;Repartidores Activos" vertex="1">
+          <mxGeometry height="65" width="180" x="1110" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU22&#xa;Detectar Repartidor&#xa;Sin Señal GPS" vertex="1">
+          <mxGeometry height="65" width="180" x="1110" y="215" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU23&#xa;Generar Alerta&#xa;de Inactividad" vertex="1">
+          <mxGeometry height="65" width="180" x="1110" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-6" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU24&#xa;Exportar Reporte&#xa;de Rutas" vertex="1">
+          <mxGeometry height="65" width="180" x="1110" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-7" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;" value="CU25&#xa;Monitorear Salud&#xa;del Clúster Kafka" vertex="1">
+          <mxGeometry height="65" width="180" x="1110" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Consultar métricas&#xa;Azure Monitor" vertex="1">
+          <mxGeometry height="55" width="180" x="1380" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-9" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Disparar Alerta&#xa;en Azure Alerts" vertex="1">
+          <mxGeometry height="55" width="180" x="1380" y="267" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Consultar Historial&#xa;en MongoDB" vertex="1">
+          <mxGeometry height="55" width="180" x="1380" y="425" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-11" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=11;" value="Verificar Lag de&#xa;Consumidores Kafka" vertex="1">
+          <mxGeometry height="55" width="180" x="1380" y="530" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-12" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fillColor=#ffffff;strokeColor=#000000;" value="Operador /&#xa;Admin" vertex="1">
+          <mxGeometry height="60" width="30" x="910" y="322" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-13" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="nuzq_ELGqUTMtvgU4uwZ-3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="995" y="352" />
+              <mxPoint x="995" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-14" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="nuzq_ELGqUTMtvgU4uwZ-4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="352" />
+              <mxPoint x="1005" y="247" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-15" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="nuzq_ELGqUTMtvgU4uwZ-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-16" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="nuzq_ELGqUTMtvgU4uwZ-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="352" />
+              <mxPoint x="1005" y="457" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-17" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-12" style="edgeStyle=orthogonalEdgeStyle;curved=1;" target="nuzq_ELGqUTMtvgU4uwZ-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="995" y="352" />
+              <mxPoint x="995" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-18" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-3" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="nuzq_ELGqUTMtvgU4uwZ-8" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-19" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-4" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;entryX=0;entryY=0;entryDx=0;entryDy=0;" target="nuzq_ELGqUTMtvgU4uwZ-9" value="«include»">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1350" y="247" />
+              <mxPoint x="1380" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-20" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-5" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="nuzq_ELGqUTMtvgU4uwZ-9" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-21" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-6" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="nuzq_ELGqUTMtvgU4uwZ-10" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nuzq_ELGqUTMtvgU4uwZ-22" edge="1" parent="1" source="nuzq_ELGqUTMtvgU4uwZ-7" style="endArrow=open;dashed=1;html=1;strokeColor=#000000;fontSize=11;" target="nuzq_ELGqUTMtvgU4uwZ-11" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
